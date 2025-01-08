@@ -45,9 +45,10 @@ This status page is configured to monitor the following services:
 
 The system is configured to send alerts through:
 
-- Telegram bot
-  [Weekly Report YAML](https://github.com/ruslanlap/upptime_monitoring/blob/main/.github/workflows/weekly-report.yml)
-  ![Status](https://ruslanlap.github.io/upptime_monitoring/image.png)
+- Telegram bot: Add TELEGRAM_TOKEN and SECRETS_CHAT_ID to GitHub secrets
+- [Weekly Report YAML notification in telegram](https://github.com/ruslanlap/upptime_monitoring/blob/main/.github/workflows/weekly-report.yml)
+
+![Bot](https://github.com/ruslanlap/upptime_monitoring/blob/master/image.png)
 
 ### 🛠 Setup Instructions
 
