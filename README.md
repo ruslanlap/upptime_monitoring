@@ -45,8 +45,9 @@ This status page is configured to monitor the following services:
 
 The system is configured to send alerts through:
 
-- Email notifications for downtime
-- Discord webhook integration (optional)
+- Telegram bot
+  [Weekly Report YAML](https://github.com/ruslanlap/upptime_monitoring/blob/main/.github/workflows/weekly-report.yml)
+  ![Status](https://ruslanlap.github.io/upptime_monitoring/image.png)
 
 ### 🛠 Setup Instructions
 
