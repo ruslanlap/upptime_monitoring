@@ -6,7 +6,7 @@
 # Your changes will be overwritten when the Upptime template updates (by default, weekly)
 # Instead, change .upptimerc.yml configuration and the workflows will be generated accordingly.
 #
-# 🔼 Upptime @v1.38.0
+# Upptime @v1.38.0
 # GitHub-powered open-source uptime monitor and status page by Anand Chowdhary
 
 # * Source: https://github.com/upptime/upptime
@@ -16,7 +16,7 @@
 name: Uptime CI
 on:
   schedule:
-    - cron: "*/5 * * * *" # Запускається кожні 5 хвилин
+    - cron: "*/5 * * * *"
   repository_dispatch:
     types: [uptime]
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
       - name: Send Telegram Notification
-        if: always() # Відправляє сповіщення незалежно від статусу виконання
+        if: always()
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
