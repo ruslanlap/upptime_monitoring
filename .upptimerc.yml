@@ -9,23 +9,64 @@ sites:
       - 200
     assignees:
       - ruslanlap
+    maxResponseTime: 5000
+    method: GET
+    
   - name: UCU_INN_SITE
     url: https://ucuinn.github.io
     expectedStatusCodes:
       - 200
     assignees:
       - ruslanlap
+    maxResponseTime: 5000
+    method: GET
 
 status-website:
   baseUrl: upptime_monitoring
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Upptime
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  introMessage: This is a sample status page
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+
+i18n:
+  activeIncidents: Активні інциденти
+  allSystemsOperational: Всі системи працюють
+  incidentReport: "Звіт про інцидент #$NUMBER →"
+  activeIncidentSummary: Відкрито $DATE з $POSTS публікаціями
+  incidentTitle: Деталі інциденту $NUMBER
+  incidentDetails: Деталі інциденту
+  incidentFixed: Виправлено
+  incidentOngoing: Триває
+  incidentOpenedAt: Відкрито о
+  incidentClosedAt: Закрито о
+  incidentViewOnGitHub: Переглянути та підписатися на GitHub
+  incidentCommentSummary: Опубліковано о $DATE користувачем $AUTHOR
+  incidentBack: ← Назад до всіх інцидентів
+  pastIncidents: Минулі інциденти
+  pastIncidentsResolved: Вирішено за $MINUTES хвилин з $DATE
+  liveStatus: Поточний статус
+  overallUptime: "Загальний аптайм: $UPTIME"
+  overallUptimeTitle: Загальний аптайм
+  averageResponseTime: "Середній час відповіді: $TIMEms"
+  averageResponseTimeTitle: Середній відгук
+  sevelDayResponseTime: 7-денний час відповіді
+  responseTimeDay: 24 години
+  responseTimeWeek: 7 днів
+  responseTimeMonth: 30 днів
+  responseTimeYear: Рік
+  uptime: "Аптайм: $UPTIME"
+  uptimeDay: 24-годинний аптайм
+  uptimeWeek: 7-денний аптайм
+  uptimeMonth: 30-денний аптайм
+  uptimeYear: Річний аптайм
+  responseTime: Час відповіді
+  loading: Завантаження
+  navGitHub: GitHub
+  footer: Ця сторінка [open source]($REPO), працює на [Upptime](https://upptime.js.org)
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
