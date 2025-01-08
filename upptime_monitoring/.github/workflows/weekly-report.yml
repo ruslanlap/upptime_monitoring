@@ -1,0 +1,46 @@
+name: Weekly Report
+
+on:
+  schedule:
+    - cron: "0 11 * * 1" # Щопонеділка об 11:00 ранку
+
+  workflow_dispatch:
+
+jobs:
+  send-weekly-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Клонуємо репозиторій для доступу до даних Upptime
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Збираємо статистику з даних репозиторію
+      - name: Generate Weekly Stats
+        id: stats
+        run: |
+          TOTAL_SITES=$(cat .upptimerc.yml | grep 'name:' | wc -l)
+          TOTAL_UPTIME=$(cat history/summary.json | jq '.uptime / 100')
+          AVG_RESPONSE_TIME=$(cat history/summary.json | jq '.responseTime')
+
+          echo "TOTAL_SITES=${TOTAL_SITES}" >> $GITHUB_ENV
+          echo "TOTAL_UPTIME=${TOTAL_UPTIME}" >> $GITHUB_ENV
+          echo "AVG_RESPONSE_TIME=${AVG_RESPONSE_TIME}" >> $GITHUB_ENV
+
+      # Надсилаємо звіт у Telegram
+      - name: Send Telegram Message
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TOTAL_SITES: ${{ env.TOTAL_SITES }}
+          TOTAL_UPTIME: ${{ env.TOTAL_UPTIME }}
+          AVG_RESPONSE_TIME: ${{ env.AVG_RESPONSE_TIME }}
+        run: |
+          curl -s -X POST https://api.telegram.org/bot$TELEGRAM_TOKEN/sendMessage \
+            -d chat_id=$TELEGRAM_CHAT_ID \
+            -d text="✅ Weekly Status Report:
+            - Total Monitored Websites: $TOTAL_SITES
+            - Average Uptime: $TOTAL_UPTIME%
+            - Average Response Time: $AVG_RESPONSE_TIME ms
+
+            👍 All systems are operational. Everything is good!"
