@@ -19,8 +19,8 @@ jobs:
         id: stats
         run: |
           TOTAL_SITES=$(cat .upptimerc.yml | grep 'name:' | wc -l)
-          TOTAL_UPTIME=$(cat history/summary.json | jq '.[] | .uptime | add / . | .')  # Assuming "uptime" is a key within each object
-          AVG_RESPONSE_TIME=$(cat history/summary.json | jq '.[] | .responseTime | add / . | .')  # Assuming "responseTime" is a key within each object
+          TOTAL_UPTIME=$(cat history/summary.json | jq '[.[].uptime] | add / length')
+          AVG_RESPONSE_TIME=$(cat history/summary.json | jq '[.[].responseTime] | add / length')
           echo "TOTAL_SITES=${TOTAL_SITES}" >> $GITHUB_ENV
           echo "TOTAL_UPTIME=${TOTAL_UPTIME}" >> $GITHUB_ENV
           echo "AVG_RESPONSE_TIME=${AVG_RESPONSE_TIME}" >> $GITHUB_ENV
