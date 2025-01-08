@@ -1,15 +1,16 @@
 # Change these first
 owner: ruslanlap # Your GitHub organization or username, where this repository lives
-repo: upptime_monitoring # The name of this repository
+repo: upptime-monitoring # The name of this repository
 
 sites:
-  - name: FIN_UCU_Inn
+  - name: BOT
     url: https://fin-z-ucu-inn-new-deploy.replit.app
     maxResponseTime: 5000
     expectedStatusCodes:
       - 200
     assignees:
-      -     maxRes  - name: UCU_INN_SITE
+      - ruslanlap
+  - name: SITE
     url: https://ucuinn.github.io
     maxResponseTime: 5000
     expectedStatusCodes:
@@ -19,15 +20,13 @@ sites:
 
 notifications:
   - type: email
-    notification_email: $NOTIFICATION_EMAIL #  You'll need to set this in GitHub secrets
-  - type: webhook
-    url: $DISCORD_WEBHOOK_URL  # You'll need to set this in GitHub secrets if you want to use Discord notifications
+    notification_email: $NOTIFICATION_EMAIL # You'll need to set this in GitHub secrets
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   # cname: demo.upptime.js.org --- because i havn't
-  baseUrl: upptime_monitoring
+  baseUrl: upptime-monitoring
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Upptime
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
@@ -37,8 +36,5 @@ status-website:
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-com/$OWNER/$REPO
-.com/$OWNER/$REPO
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
