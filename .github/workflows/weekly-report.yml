@@ -18,7 +18,7 @@ jobs:
       - name: Generate Weekly Stats
         id: stats
         run: |
-          TOTAL_SITES=$(grep 'name:' .upptimerc.yml | wc -l)
+          TOTAL_SITES=$(grep '^\s*-\s*name:' .upptimerc.yml | wc -l)
           TOTAL_UPTIME=$(jq '[.[].uptime | sub("%"; "") | tonumber] | add / length' history/summary.json)
           AVG_RESPONSE_TIME=$(jq '[.[].time] | add / length' history/summary.json)
           echo "TOTAL_SITES=${TOTAL_SITES}" >> $GITHUB_ENV
