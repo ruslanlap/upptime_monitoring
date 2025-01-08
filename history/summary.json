@@ -4,39 +4,35 @@
     "url": "https://fin-z-ucu-inn-new-deploy.replit.app",
     "icon": "https://icons.duckduckgo.com/ip3/fin-z-ucu-inn-new-deploy.replit.app.ico",
     "slug": "fin-ucu-inn",
-    "status": "down",
-    "uptime": "99.00%",
-    "uptimeDay": "95.00%",
-    "uptimeWeek": "98.50%",
-    "uptimeMonth": "99.00%",
-    "uptimeYear": "99.90%",
-    "time": 0,
-    "timeDay": 0,
-    "timeWeek": 0,
-    "timeMonth": 0,
-    "timeYear": 0,
-    "dailyMinutesDown": {
-      "2025-01-08": 30
-    }
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 170,
+    "timeDay": 170,
+    "timeWeek": 170,
+    "timeMonth": 170,
+    "timeYear": 170,
+    "dailyMinutesDown": {}
   },
   {
     "name": "UCU_INN_SITE",
     "url": "https://ucuinn.github.io",
     "icon": "https://icons.duckduckgo.com/ip3/ucuinn.github.io.ico",
     "slug": "ucu-inn-site",
-    "status": "down",
-    "uptime": "98.50%",
-    "uptimeDay": "90.00%",
-    "uptimeWeek": "95.00%",
-    "uptimeMonth": "98.00%",
-    "uptimeYear": "99.00%",
-    "time": 0,
-    "timeDay": 0,
-    "timeWeek": 0,
-    "timeMonth": 0,
-    "timeYear": 0,
-    "dailyMinutesDown": {
-      "2025-01-08": 60
-    }
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 72,
+    "timeDay": 72,
+    "timeWeek": 72,
+    "timeMonth": 72,
+    "timeYear": 72,
+    "dailyMinutesDown": {}
   }
 ]
