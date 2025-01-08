@@ -50,7 +50,7 @@ The system is configured to send alerts through:
 
 ![Bot](https://github.com/ruslanlap/upptime_monitoring/blob/master/image.png)
 
-- [more instructions about telegram notification here:](https://github.com/ruslanlap/upptime_monitoring/blob/master/TelegramNTF.md)
+- [more instructions about telegram notification here ⬅](https://github.com/ruslanlap/upptime_monitoring/blob/master/TelegramNTF.md)
 
 ### 🛠 Setup Instructions
 
