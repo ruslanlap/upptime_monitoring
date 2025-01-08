@@ -16,16 +16,15 @@ jobs:
         uses: actions/checkout@v3
 
       # Збираємо статистику з даних репозиторію
-      - name: Generate Weekly Stats
-        id: stats
-        run: |
-          TOTAL_SITES=$(cat .upptimerc.yml | grep 'name:' | wc -l)
-          TOTAL_UPTIME=$(cat history/summary.json | jq 'map(.uptime) | add / length | . * 100')
-          AVG_RESPONSE_TIME=$(cat history/summary.json | jq 'map(.responseTime) | add / length')
-
-          echo "TOTAL_SITES=${TOTAL_SITES}" >> $GITHUB_ENV
-          echo "TOTAL_UPTIME=${TOTAL_UPTIME}" >> $GITHUB_ENV
-          echo "AVG_RESPONSE_TIME=${AVG_RESPONSE_TIME}" >> $GITHUB_ENV
+      -- name: Generate Weekly Stats
+  id: stats
+  run: |
+    TOTAL_SITES=$(cat .upptimerc.yml | grep 'name:' | wc -l)
+    TOTAL_UPTIME=$(cat history/summary.json | jq '[.[].uptime] | add / length')
+    AVG_RESPONSE_TIME=$(cat history/summary.json | jq '[.[].responseTime] | add / length')
+    echo "TOTAL_SITES=${TOTAL_SITES}" >> $GITHUB_ENV
+    echo "TOTAL_UPTIME=${TOTAL_UPTIME}" >> $GITHUB_ENV
+    echo "AVG_RESPONSE_TIME=${AVG_RESPONSE_TIME}" >> $GITHUB_ENV
 
       # Надсилаємо звіт у Telegram
       - name: Send Telegram Message
