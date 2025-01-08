@@ -68,5 +68,6 @@ i18n:
   loading: Завантаження
   navGitHub: GitHub
   footer: Ця сторінка [open source]($REPO), працює на [Upptime](https://upptime.js.org)
+s://github.com/$OWNER/$REPO
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
