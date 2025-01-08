@@ -3,7 +3,6 @@ name: Weekly Report
 on:
   schedule:
     - cron: "0 11 * * 1" # Щопонеділка об 11:00 ранку
-
   workflow_dispatch:
 
 jobs:
@@ -19,10 +18,9 @@ jobs:
       - name: Generate Weekly Stats
         id: stats
         run: |
-          TOTAL_SITES=$(cat .upptimerc.yml | grep 'name:' | wc -l)
-          TOTAL_UPTIME=$(cat history/summary.json | jq '.uptime / 100')
-          AVG_RESPONSE_TIME=$(cat history/summary.json | jq '.responseTime')
-
+          TOTAL_SITES=$(grep 'name:' .upptimerc.yml | wc -l)
+          TOTAL_UPTIME=$(jq '[.[].uptime | sub("%"; "") | tonumber] | add / length' history/summary.json)
+          AVG_RESPONSE_TIME=$(jq '[.[].time] | add / length' history/summary.json)
           echo "TOTAL_SITES=${TOTAL_SITES}" >> $GITHUB_ENV
           echo "TOTAL_UPTIME=${TOTAL_UPTIME}" >> $GITHUB_ENV
           echo "AVG_RESPONSE_TIME=${AVG_RESPONSE_TIME}" >> $GITHUB_ENV
