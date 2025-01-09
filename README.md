@@ -30,7 +30,6 @@ This status page is configured to monitor the following services:
 
 ### Monitoring Parameters
 
-- Response time threshold: 5000ms
 - Expected status code: 200
 - Automatic issue assignment enabled
 

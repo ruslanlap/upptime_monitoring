@@ -5,18 +5,8 @@ repo: upptime-monitoring # The name of this repository
 sites:
   - name: FIN_UCU_Inn
     url: https://fin-z-ucu-inn-new-deploy.replit.app
-    maxResponseTime: 5000
-    expectedStatusCodes:
-      - 200
-    assignees:
-      - ruslanlap
   - name: UCU_INN_SITE
     url: https://ucuinn.github.io
-    maxResponseTime: 5000
-    expectedStatusCodes:
-      - 200
-    assignees:
-      - ruslanlap
 
 notifications:
   - type: email
