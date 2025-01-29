@@ -4,19 +4,19 @@
     "url": "https://fin-z-ucu-inn-new-deploy.replit.app",
     "icon": "https://icons.duckduckgo.com/ip3/fin-z-ucu-inn-new-deploy.replit.app.ico",
     "slug": "fin-ucu-inn",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 202,
-    "timeDay": 156,
-    "timeWeek": 188,
-    "timeMonth": 202,
-    "timeYear": 202,
+    "status": "up",
+    "uptime": "99.96%",
+    "uptimeDay": "99.05%",
+    "uptimeWeek": "99.86%",
+    "uptimeMonth": "99.96%",
+    "uptimeYear": "99.96%",
+    "time": 201,
+    "timeDay": 159,
+    "timeWeek": 185,
+    "timeMonth": 201,
+    "timeYear": 201,
     "dailyMinutesDown": {
-      "2025-01-29": 0
+      "2025-01-29": 14
     }
   },
   {
